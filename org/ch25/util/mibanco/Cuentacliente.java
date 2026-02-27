@@ -6,6 +6,11 @@ import java.util.Random;
 
 import org.ch25.util.Imprimible;
 
+/**
+ * La clase Cuentacliente hace ...
+ * @author Virginia
+ * @version 1.1
+ */
 public abstract class Cuentacliente implements org.ch25.util.mibanco.Imprimible {
 	//Los números de cuenta del banco iniciarán después de 1000
 	private static int consecutivo=1000; 
@@ -20,7 +25,13 @@ public abstract class Cuentacliente implements org.ch25.util.mibanco.Imprimible 
 
 	private String nomCli;
 
-	
+	/**
+	 * Descripción del método
+	 * @param saldo {double} saldo del cliente ...
+	 * @param numeroCliente {string} numero de cuenta
+	 * @param fechaApertura {date} fecha en la que se abre la cuenta
+	 * @param nomCli {string} nombre del cliente
+	 */
 	public Cuentacliente(double saldo, String numeroCliente, Date fechaApertura,
 						 String nomCli) {
 	    this.saldo = saldo;
@@ -34,6 +45,10 @@ public abstract class Cuentacliente implements org.ch25.util.mibanco.Imprimible 
 		this.fechaApertura = fechaApertura;
 	}//constructor
 
+	/**
+	 * Metodo getAbs que devuelve un valor absoluto
+	 * @return {int} valor absoluto
+	 */
 	private static int getAbs() {
 		return Math.abs(new Random().nextInt());
 	}
